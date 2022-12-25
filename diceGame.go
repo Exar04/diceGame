@@ -7,7 +7,13 @@ import (
 )
 
 func main(){
+	diceNumber := rollDice()
+	fmt.Println("The value of dice is ", diceNumber)
+}
+
+func rollDice() int{
 	rand.Seed(time.Now().UnixNano())
 	diceNumber := rand.Intn(6) +1
-	fmt.Println("The value of dice is ", diceNumber)
+
+	return diceNumber
 }
